@@ -1,0 +1,22 @@
+---
+- name: GIL Modification
+  hosts: all
+  vars:
+    nvernew: "385.08"
+    nverauto: "391.33"
+    nverbase: "353.30"
+    comp: "$env:computername.$env:userdnsdomain"
+    nvidiasrcpath: "\\perat2nanassvm01-11.perat2.chevrontexaco.net\cifsdispatch\data\utc\ops\GIL_Workstations\source\HP_Blade"
+    installer: "NVIDIA_385.08_Win10_64bit_HPGraphServBld_Driver (1).exe"
+    GIL_WKS: "C:\TEMP\gil_wks\HP_Blade"
+    scripts: "perf"
+    bioscmd: "HPEBIOSCmdlets-x64.msi"
+    #mainscript: "ABUPerfMod.ps1"
+    ilopass: "a.txt"
+
+    - name: Print
+    - debug:
+    	msg: "Hello '{{ comp }}'"
+      when: 2 > 1 
+
+
